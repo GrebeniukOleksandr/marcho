@@ -16,7 +16,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "gulp-autoprefixer": "^8.0.0",
