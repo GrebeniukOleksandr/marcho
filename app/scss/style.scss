@@ -375,8 +375,118 @@ background-color: $bg;
     @extend %btn;
   }
 }
-
-
+.product{
+  padding: 105px 0 120px;
+  text-align: center;
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 45px 30px;
+    margin-bottom: 55px;
+  }
+  &__link{
+    text-transform: uppercase;
+    color: $title;
+    display: inline-block;
+    border: 1px solid $accent;
+    padding: 14px 27px;
+  }
+}
+.product-item{
+  max-width: 370px;
+  text-align: center;
+  &:hover{
+    .product-item__link-box{
+      transform: translateY(0);
+    }
+  }
+  &__img-box{
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  &__link-box{
+    transition: all .3s;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 25px;
+    filter: drop-shadow(0px 5px 15px rgba(152,152,152,0.2));
+    transform: translateY(300%);
+  }
+  &__link{
+    display: inherit;
+    path{
+      transition: all .3s;
+    }
+  }
+  &__link:hover{
+    path{
+      fill:$accent;
+    }
+  }
+  &__link--line::before,
+  &__link--line::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: #ececec;
+    top: 10px;
+  }
+  &__link--line::before{
+    left: 70px;
+  }
+  &__link--line::after{
+    right: 70px;
+  }
+  &__images{
+    object-fit: cover;
+  }
+  &__title{
+    padding: 15px 0 20px;
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  &__price{
+    display: flex;
+    justify-content: center;
+    @extend %roboto-400;
+    color: $title;
+  }
+  &__new-price{
+    padding: 0 12px;
+  }
+  &__old-price{ 
+    padding: 0 12px;
+    opacity: .2;
+    text-decoration: line-through;
+  }
+  &--sale{
+    .product-item__img-box::before{
+      content: 'SALE';
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      padding: 3px 10px;
+    }
+  }
+}
+.star{
+  margin: 0 auto;
+}
 
 
 @import 'media';
