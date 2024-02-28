@@ -76,39 +76,155 @@
           style="background-image: url(images/top_bg.png)"
         >
           <div class="container">
-            <h2 class="top__title title">Log in</h2>
+            <h2 class="top__title title">Shop page</h2>
             <div class="brescrumbs">
               <ul class="brescrumbs__list">
                 <li class="brescrumbs__item">
                   <a href="#" class="brescrumbs__link">Home</a>
                 </li>
                 <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Log in</a>
+                  <a href="#" class="brescrumbs__link">Shop page</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="modal">
+      <section class="shop">
         <div class="container">
-          <div class="modal__links">
-            <a class="modal__link" href="#">REGISTER</a>
-            <a class="modal__link modal__link--active" href="#">LOGIN</a>
+          <div class="shop__inner">
+            <div class="shop__filters filter">
+              <div class="filter-search filter__item">
+                <h3 class="filter__title">Search</h3>
+                <form class="filter-search__form" action="#">
+                  <input
+                    class="filter-search__input"
+                    type="text"
+                    placeholder="Search your keyword...."
+                  />
+                  <button class="filter-search__btn" class="submit">
+                    <img
+                      src="images/icons/search-white.svg"
+                      alt="search images"
+                    />
+                  </button>
+                </form>
+              </div>
+              <div class="filter__item filter-price">
+                <h3 class="filter__title">Price Filter</h3>
+                <form action="#" class="filter-price__form">
+                  <input
+                    type="text"
+                    class="filter-price__input"
+                    data-min="0"
+                    data-max="999"
+                    data-from="200"
+                    data-to="800"
+                  />
+                  <label class="filter-price__label">
+                    <span
+                      >Price: $<span class="filter-price__from"></span> - $<span
+                        class="filter-price__to"
+                      ></span>
+                    </span>
+                    <button class="filter-price__btn" type="submit">
+                      Filter
+                    </button>
+                  </label>
+                </form>
+              </div>
+              <div class="filter__item filter-color">
+                <h3 class="filter__title">Color Filter</h3>
+                <form action="#" class="filter-color__form">
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Blue (15)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--blue"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Red (09)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--red"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Green (28)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--green"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Orange (11)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--orange"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Black (05)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--black"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Purple (21)</span>
+                    <div class="filter-color__box">
+                      <input type="checkbox" class="filter-color__input" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--purple"
+                      ></span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filter__item filter-size">
+                <h3 class="filter__title">Size Filter</h3>
+                <form class="filter-size__form" action="#">
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">X-small</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Small</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Medium</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Large</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">XXL</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="shop__content"></div>
           </div>
-        <form class="modal__form" action="#">
-          <label class="modal__label" for="">
-            Username or email address*
-            <input class="modal__input" type="text" required></label>
-          <label class="modal__label" for="">
-            Password*
-            <input class="modal__input" type="password" required></label>
-            <label class="modal__label" for="">
-              <input type="checkbox">Remember me
-            </label>
-            <button class="modal__btn" type="submit">LOG IN</button>
-            <a class="modal__error" href="#">Lost your password?</a>
-        </form>
         </div>
       </section>
     </main>
