@@ -24,8 +24,10 @@ $bg: #f6f6f6;
   text-transform: uppercase;
   color: #fff;
   background-color: $accent;
+  cursor: pointer;
   @extend %roboto-400;
   filter: drop-shadow(0px 7px 10px rgba(255,17,48,0.3));
+  border: none;
 }
 
 @function max($numbers...){
