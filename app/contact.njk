@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contact.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include 'app/module/_header/_header.html' %}
+    <main class="main">
+      <section class="top">
+        <div
+          class="top__container"
+          style="background-image: url(images/top_bg.png)"
+        >
+          <div class="container">
+            <h2 class="top__title title">CONTACT US</h2>
+            <div class="brescrumbs">
+              <ul class="brescrumbs__list">
+                <li class="brescrumbs__item">
+                  <a href="#" class="brescrumbs__link">Home</a>
+                </li>
+                <li class="brescrumbs__item">
+                  <a href="#" class="brescrumbs__link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70039.74339545229!2d-74.03106681499226!3d40.673768952028055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1710181498347!5m2!1suk!2sua"
+          id="map"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__inner">
+            <div class="contact__info">
+              <h3 class="contact__info-title">
+                Feel Free Don’t Hesitate To Contact With Us
+              </h3>
+              <p class="contact__info-text">
+                Lorem ipsum dolor sit amet, consectetur adingn elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao
+                cumsan lacus vel facilisis.
+              </p>
+              <ul class="contact__info-list">
+                <li class="contact__info-item">
+                  <a class="contact__info-phone" href="tel:+01234567896"
+                    >+0-123-456-7896</a
+                  >
+                  <a class="contact__info-phone" href="tel:+01234567896"
+                    >+0-123-456-7896</a
+                  >
+                </li>
+                <li class="contact__info-item contact__info--location">
+                  Ranlon Market 789 Road,<br> Market Street, Newyork
+                </li>
+                <li class="contact__info-item contact__info--email">
+                  <a href="mailto:yourmailaddress@gmail.com"
+                    >yourmailaddress@gmail.com</a
+                  >
+                  <a href="mailto:companymail@gmail.com"
+                    >companymail@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <form class="contact__form" action="#">
+              <p class="contact__form-title">Contact Form</p>
+              <div class="contact__form-box">
+                <input
+                  class="contact__form-input"
+                  placeholder="Your Name"
+                  type="text"
+                />
+                <input
+                  class="contact__form-input"
+                  placeholder="Your E-mail Address"
+                  type="text"
+                />
+              </div>
+              <input class="contact__form-input" placeholder="Subject" type="text" />
+              <textarea class="contact__form-textarea" placeholder="Message here"></textarea>
+              <button class="contact__form-btn" type="submit">SEND MESSAGE</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'app/module/_footer/_footer.html' %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
