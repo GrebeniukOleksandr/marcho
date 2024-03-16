@@ -40,3 +40,29 @@
     @extend %btn;
   }
 }
+@media (max-width: 1050px){
+  .video-fashion{
+    padding: 60px 0;
+    &__inner{
+      display: block;
+    }
+    &__popup{
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 620px){
+  .video-fashion{
+    &__popup{
+      height: 270px;
+      background-position: center top;
+    }
+    &__subtitle{
+      padding-top: 40px;
+      font-size: 18px;
+    }
+    &__text{
+      margin-bottom: 30px;
+    }
+  }
+}

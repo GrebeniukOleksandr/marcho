@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 .menu {
@@ -30,6 +31,9 @@
     @extend %roboto-700;
     border-bottom: 1px solid $accent;
   }
+  &__btn{
+    display: none;
+  }
 }
 .user-nav {
   display: flex;
@@ -51,5 +55,99 @@
     color: #fff;
     text-align: center;
     line-height: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    &__inner {
+      padding-right: 10px;
+    }
+  }
+}
+@media (max-width: 860px) {
+  .menu {
+    order:1;
+    margin-left: 40px;
+    &__list-item{
+      width: 100%;
+      padding: 0 15px;
+      text-align: center;
+    }
+    &__list {
+      transform: translateY(-200%);
+      position: absolute;
+      top: 85px;
+      width: 100%;
+      left: 0px;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: all .3s;
+      background-color: #fff;
+      &.menu__list--active{
+        transition: all .3s;
+        transform: translateY(0%);
+      }
+    }
+    &__list-link{
+      display: block;
+      padding: 12px 0;
+    }
+    &__list-item + .menu__list-item {
+      padding-left: 15px;
+    }
+    
+    &__btn {
+      width: 30px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+    }
+  }
+  .user-nav{
+    margin-left: auto;
+  }
+}
+@media (max-width: 500px) {
+  .header{
+    &__inner{
+    padding-right: 0;
+    }
+  }
+  .menu{
+    order:0;
+    &__list{
+      top: 140px;
+    }
+  }
+  .user-nav{
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 35px;
+    padding-right: 15px;
   }
 }

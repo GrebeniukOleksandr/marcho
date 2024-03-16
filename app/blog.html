@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/blog.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -14,6 +15,9 @@
         <img class="logo__img" src="images/logo.png" alt="logo" />
       </a>
       <nav class="menu">
+        <button class="menu__btn">
+          <span></span>
+        </button>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-link menu__list-link--active" href="#">HOME</a>
@@ -69,25 +73,25 @@
 </header>
     <main class="main">
       <section class="top">
-        <div
-          class="top__container"
-          style="background-image: url(images/top_bg.png)"
-        >
-          <div class="container">
-            <h2 class="top__title title">BLOG STANDARD</h2>
-            <div class="brescrumbs">
-              <ul class="brescrumbs__list">
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Home</a>
-                </li>
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Blog page</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div
+    class="top__container"
+    style="background-image: url(images/top_bg.png)"
+  >
+    <div class="container">
+      <h2 class="top__title title">BLOG STANDARD</h2>
+      <div class="brescrumbs">
+        <ul class="brescrumbs__list">
+          <li class="brescrumbs__item">
+            <a href="#" class="brescrumbs__link">Home</a>
+          </li>
+          <li class="brescrumbs__item">
+            <a href="#" class="brescrumbs__link">Blog page</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
       <section class="blog-page">
         <div class="container">
           <div class="blog-page__inner">
@@ -555,7 +559,7 @@
         </ul>
       </div>
       <div class="footer-top__items footer-top__nav">
-        <h6 class="footer-top__title">Useful Links</h6>
+        <h6 class="footer-top__title footer-top__title-hidden">Useful Links</h6>
         <ul class="footer-top__list">
           <li class="footer-top__item">
             <a class="footer-top__link" href="#">About Us </a>
@@ -575,7 +579,7 @@
         </ul>
       </div>
       <div class="footer-top__items footer-top__nav">
-        <h6 class="footer-top__title">My Account</h6>
+        <h6 class="footer-top__title footer-top__title-hidden">My Account</h6>
         <ul class="footer-top__list">
           <li class="footer-top__item">
             <a class="footer-top__link" href="#">My Account</a>
