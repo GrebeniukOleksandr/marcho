@@ -10,29 +10,13 @@
   <body>
     {% include 'app/module/_header/_header.html' %}
     <main class="main">
-      <section class="top">
-        <div
-          class="top__container"
-          style="background-image: url(images/top_bg.png)"
-        >
-          <div class="container">
-            <h2 class="top__title title">Shop page</h2>
-            <div class="brescrumbs">
-              <ul class="brescrumbs__list">
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Home</a>
-                </li>
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Shop page</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    {% include 'app/module/_top/_shop.html' %}
       <section class="shop">
         <div class="container">
           <div class="shop__inner">
+              <button class="shop__filter-btn">
+              <img src="images/icons/filter-solid.svg" alt="filer btn">
+            </button>
             <div class="shop__filters filter">
               <div class="filter-search filter__item">
                 <h3 class="filter__title">Search</h3>

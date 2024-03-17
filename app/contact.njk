@@ -4,31 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/contact.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Document</title>
   </head>
   <body>
     {% include 'app/module/_header/_header.html' %}
     <main class="main">
-      <section class="top">
-        <div
-          class="top__container"
-          style="background-image: url(images/top_bg.png)"
-        >
-          <div class="container">
-            <h2 class="top__title title">CONTACT US</h2>
-            <div class="brescrumbs">
-              <ul class="brescrumbs__list">
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Home</a>
-                </li>
-                <li class="brescrumbs__item">
-                  <a href="#" class="brescrumbs__link">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    {% include 'app/module/_top/_contact.html' %}
       <section class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70039.74339545229!2d-74.03106681499226!3d40.673768952028055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1710181498347!5m2!1suk!2sua"
