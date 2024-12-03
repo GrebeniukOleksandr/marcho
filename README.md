@@ -1,1 +1,1 @@
-https://grebeniukoleksandr.github.io/marcho/app
+https://grebeniukoleksandr.github.io/marcho/docs
