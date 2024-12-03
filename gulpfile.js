@@ -13,19 +13,19 @@ const browserSync = require('browser-sync').create();
 function browsersync(){
   browserSync.init({
     server: {
-      baseDir: 'app/'
+      baseDir: 'docs/'
     },
     notify: false
   })
 }
 function nunjucks(){
-  return src('app/*.njk')
+  return src('docs/*.njk')
   .pipe(nunjucksRender())
   .pipe(dest('app'))
   .pipe(browserSync.stream())
 }
 function styles(){
-  return src('app/scss/*.scss')
+  return src('docs/scss/*.scss')
   .pipe(scss({outputStyle: 'compressed'}))
   // .pipe(concat())
   .pipe(rename({
@@ -35,7 +35,7 @@ function styles(){
     overrideBrowserslist: ['last 10 versions'],
     grid:true
   }))
-  .pipe(dest('app/css'))
+  .pipe(dest('docs/css'))
   .pipe(browserSync.stream())
 }
 
@@ -48,16 +48,16 @@ function scripts() {
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-    'app/js/main.js'
+    'docs/js/main.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
-  .pipe(dest('app/js'))
+  .pipe(dest('docs/js'))
   .pipe(browserSync.stream())
 }
 
 function images() {
-  return src('app/images/**/*.*')
+  return src('docs/images/**/*.*')
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -79,9 +79,9 @@ function images() {
 
 function build(){
   return src([
-    'app/**/*.html',
-    'app/css/style.min.css',
-    'app/js/main.min.js'
+    'docs/**/*.html',
+    'docs/css/style.min.css',
+    'docs/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))
 }
@@ -91,10 +91,10 @@ function cleanDist(){
 }
 
 function watching(){
-  watch(['app/**/*.scss'], styles);
-  watch(['app/*.njk'], nunjucks);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['docs/**/*.scss'], styles);
+  watch(['docs/*.njk'], nunjucks);
+  watch(['docs/js/**/*.js', '!docs/js/main.min.js'], scripts);
+  watch(['docs/**/*.html']).on('change', browserSync.reload)
 }
 
 exports.styles = styles;
